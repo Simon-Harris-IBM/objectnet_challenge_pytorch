@@ -1,3 +1,4 @@
+# ObjectNet Challenge PyTorch Docker example
 
 This repository contains instructions on how to build a docker image using the PyTorch deep learning framework for the ObjectNet Challenge (**#####SH Proper name for challenge and link to synapse wiki**). It assumes you already have a pre-trained PyTorch model which you intend to submit for evaluation to the ObjectNet Challenge.
 
@@ -45,7 +46,7 @@ Instructions on how to install the CUDA toolkit and NVIDIA drivers can be found 
 ## 1.3 Clone this repository
 Clone this repo to a machine which has docker installed:
 ```bash
-$ git clone **#####SH ADD CLONE LINK**
+$ git clone https://github.com/Simon-Harris-IBM/objectnet_challenge_pytorch.git
 ```
 
 ## 1.4 objectnet_eval.py
@@ -241,10 +242,7 @@ docker run -ti --rm -v $PWD:/workspace -v $PWD/sample-images:/input/ -v $PWD/out
 ```
 When the docker container is run, the local `$PWD` will be mounted over `/workspace` directory within the image which effectively means any code/model changes made since the last `docker build` command will be contained within the running container.
 
-HOW TO TEST IF CHANGES TO DOCKERFILE -ie: rebuild*****
-
-
 ---
 
 # Upload your docker image to Synapse:
-Once you have built and tested your docker image locally you should upload it to the [Synapse docker registry](https://www.synapse.org/#!Synapse:syn21445381/wiki/600093) and then [submit your docker image to the challenge](https://www.synapse.org/#!Synapse:syn21445381/wiki/600093). **#####SH Will need to update both these link**
+Once you have built and tested your docker image locally you should upload it to the Synapse docker registry in preparation for submission to the challenge. For instructions refer to Section 6 "Upload your Docker image" of the [ObjectNet Challenge wiki](https://www.synapse.org/#!Synapse:syn21445381/wiki/600093) . **#####SH Will need to update both these link**
